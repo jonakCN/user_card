@@ -13,7 +13,7 @@ const Brands = ({ brands }) => {
 					brands.map((brand, index) => {
 						return (
 							<div
-								className='inline-flex items-center rounded-md bg-gray-50 mr-3 mt-3 px-3 py-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10'
+								className='inline-flex items-center rounded-md bg-gray-200 mr-3 mt-3 px-3 py-2 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10'
 								key={index}>
 								{brand.brand}
 							</div>
