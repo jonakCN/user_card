@@ -1,7 +1,10 @@
 import React from 'react';
 import './Details.scss';
+import { useSelector } from 'react-redux';
 
-const Details = ({ users }) => {
+const Details = () => {
+	const users = useSelector((state) => state.users);
+
 	return (
 		<div className='Details my-3'>
 			<h1 className='heading-txt text-xl font-bold text-orange-300 mb-5'>

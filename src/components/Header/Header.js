@@ -1,7 +1,10 @@
 import React from 'react';
 import './Header.scss';
+import { useSelector } from 'react-redux';
 
-const Header = ({ users }) => {
+const Header = () => {
+	const users = useSelector((state) => state.users);
+
 	const getAge = (birthDate) =>
 		Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e10);
 

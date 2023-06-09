@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { retrieveUsers } from '../slices/Personalities';
 import { retrieveBrands } from '../slices/Brands';
 import Card from './Card/Card';
 import { LoremIpsum } from 'lorem-ipsum';
 
 const PersonalityCard = () => {
-	const users = useSelector((state) => state.users);
-	const brands = useSelector((state) => state.brands);
-
 	const dispatch = useDispatch();
 
 	const [effect, setEffect] = useState(false);
@@ -57,12 +54,7 @@ const PersonalityCard = () => {
 			</div>
 
 			<div className='App flex flex-row justify-center items-center bg-slate-300 py-20 font-sans'>
-				<Card
-					initFetch={initFetch}
-					users={users}
-					brands={brands}
-					description={description}
-				/>
+				<Card initFetch={initFetch} description={description} />
 			</div>
 		</>
 	);

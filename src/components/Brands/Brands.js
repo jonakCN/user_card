@@ -1,8 +1,10 @@
 import React from 'react';
-
 import './Brands.scss';
+import { useSelector } from 'react-redux';
 
-const Brands = ({ brands }) => {
+const Brands = () => {
+	const brands = useSelector((state) => state.brands);
+
 	return (
 		<div className='Brands py-3'>
 			<h1 className='heading-txt text-xl font-bold text-orange-300 my-2'>
